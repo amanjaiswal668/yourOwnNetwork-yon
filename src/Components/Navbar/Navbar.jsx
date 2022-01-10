@@ -21,7 +21,8 @@ function Navigation() {
     setIsUserLoggedIn(null);
     history.replace("/");
   };
-// const userList = isContentAvailable["post"]["following"];
+const userList = isContentAvailable["post"]["email"];
+console.log(userList);
   const history = useHistory();
   return (
     <Navbar bg="light" expand={false}>

@@ -33,14 +33,14 @@ const RenderContent = () => {
 
   const history = useHistory();
   useEffect(() => {
-    // if(userIsLoggedInWithToken){
-
+    fetchData();
+    }, []);
     async function fetchData() {
       console.log("fetch data is called");
       console.log(localStorage.getItem("userId"));
       const isUserID = localStorage.getItem("userId");
 
-      const response = await fetch("http://localhost:4000/post", {
+      const response = await fetch(`${process.env.URL}/post`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -59,9 +59,9 @@ const RenderContent = () => {
         console.log(response.statusText);
       }
     }
-    fetchData();
+    
     // }
-  }, [userIsLoggedInWithToken]);
+  
 
   // Post data
   async function postTweet() {
@@ -69,7 +69,7 @@ const RenderContent = () => {
 
     const isUserID = localStorage.getItem("userId");
     console.log(isUserID);
-    const response = await fetch("http://localhost:4000/upload", {
+    const response = await fetch(`${process.env.URL}/upload`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -86,6 +86,7 @@ const RenderContent = () => {
     console.log(json);
     if (response.status === 200) {
       console.log(response.statusText);
+      fetchData();
     } else {
       console.log(response.statusText);
     }

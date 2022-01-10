@@ -17,7 +17,7 @@ const SignUp = (props) => {
       password: passwordInputRef.current.value,
     };
     console.log(data);
-    const response = await fetch("http://localhost:4000/create", {
+    const response = await fetch(`${process.env.URL}/create`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
