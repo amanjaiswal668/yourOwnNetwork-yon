@@ -1,0 +1,7 @@
+.Sidebar{
+    background-color: tomato;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex : 0.3;
+    /* min-width: 100px; */
+}

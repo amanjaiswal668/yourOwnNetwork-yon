@@ -1,0 +1,32 @@
+.RenderContentContainer{
+    /* flex : 0.6;
+    overflow: hidden;
+    min-width: fit-content; */
+}
+
+.RenderContentHeader{
+    /* position: sticky;
+    top : 0;
+    background-color: #fff;
+    z-index : 100;
+    font-size: 20px; */
+    /* float: left; */
+
+}
+
+.form {
+    width: 300px !important;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+ .uploadButton{
+     float: right;
+    width : 100px;
+    /* margin-top: 25px; */
+    /* margin-bottom: 25px; */
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 10px;
+}
