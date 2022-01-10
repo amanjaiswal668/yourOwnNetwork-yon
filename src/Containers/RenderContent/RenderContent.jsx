@@ -40,7 +40,7 @@ const RenderContent = () => {
       console.log(localStorage.getItem("userId"));
       const isUserID = localStorage.getItem("userId");
 
-      const response = await fetch(`${process.env.URL}/post`, {
+      const response = await fetch(`${process.env.REACT_APP_URL}/post`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ const RenderContent = () => {
 
     const isUserID = localStorage.getItem("userId");
     console.log(isUserID);
-    const response = await fetch(`${process.env.URL}/upload`, {
+    const response = await fetch(`${process.env.REACT_APP_URL}/upload`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
